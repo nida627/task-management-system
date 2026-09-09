@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ "Edit Task" if task_id else "Create Task" }}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <h1>
+                {{ "Edit Task" if task_id else "Create Task" }}
+            </h1>
+
+            <p class="subtitle">
+
+                {{ "Update your task" if task_id else "Add a new task" }}
+
+            </p>
+
+
+            <form id="taskForm">
+
+
+                <!--
+                    Empty on Create page.
+                    Contains task ID on Edit page.
+                -->
+
+                <input
+                    type="hidden"
+                    id="taskId"
+                    value="{{ task_id or '' }}"
+                >
+
+
+                <!-- TITLE -->
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="form-group">
+
+                    <label for="status">
+                        Status
+                    </label>
+
+                    <select id="status">
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="in_progress">
+                            In Progress
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRIORITY -->
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priority
+                    </label>
+
+                    <select id="priority">
+
+                        <option value="low">
+                            Low
+                        </option>
+
+                        <option
+                            value="medium"
+                            selected
+                        >
+                            Medium
+                        </option>
+
+                        <option value="high">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DUE DATE -->
+
+                <div class="form-group">
+
+                    <label for="due_date">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        id="due_date"
+                    >
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button type="submit">
+
+                    {{ "Update Task" if task_id else "Create Task" }}
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <p id="taskMessage"></p>
+
+
+            </form>
+
+
+            <!-- BACK -->
+
+            <p class="switch-page">
+
+                <a href="/dashboard">
+                    ← Back to Dashboard
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='js/app.js') }}">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+# POST http://127.0.0.1:5000/api/auth/login
+# Content-Type: application/json
+
+# {
+#     "email": "nida@example.com",
+#     "password": "123456"
+# }
+
+# GET http://127.0.0.1:5000/api/auth/profile
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODM1MTk3MCwianRpIjoiOGM4ODc4MDItMTIzOS00MDhmLWFkMDgtMGUxNWI1ODliNTczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODgzNTE5NzAsImNzcmYiOiI0MjIyNjc4Yy0yZTQ5LTRhYjgtYjhhZi1kYjA1OWVhNjkyNjIiLCJleHAiOjE3ODgzNTI4NzB9.4oXSSbYdsf3zPNBaepErf4_gtSiXJdGYog7zGuJCXfs
+
+# POST http://127.0.0.1:5000/api/tasks
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODQxNDEwNSwianRpIjoiODFhZDhkN2ItNmNlOC00N2I5LTg5ZjgtMjFiYWIwMDdiYzQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODg0MTQxMDUsImNzcmYiOiIyZTBiMGQwYi0zMTcwLTQ3YjctODNmZi1kMWJlOTJmYjI3ODciLCJleHAiOjE3ODg0MTUwMDV9.7TPsCTsMxnLHlyFJAYkL1HcxuYMa38_DuTv3-R4vTBk
+
+# {
+#     "title": "Learn Flask JWT",
+#     "description": "Complete authentication and task APIs",
+#     "status": "pending",
+#     "priority": "high"
+# }
+
+# PUT http://127.0.0.1:5000/api/tasks/1
+# content-type : application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODQxNDEwNSwianRpIjoiODFhZDhkN2ItNmNlOC00N2I5LTg5ZjgtMjFiYWIwMDdiYzQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODg0MTQxMDUsImNzcmYiOiIyZTBiMGQwYi0zMTcwLTQ3YjctODNmZi1kMWJlOTJmYjI3ODciLCJleHAiOjE3ODg0MTUwMDV9.7TPsCTsMxnLHlyFJAYkL1HcxuYMa38_DuTv3-R4vTBk
+
+# {
+#     "title": "Learn Flask JWT - Updated",
+#     "description": "JWT authentication completed",
+#     "status": "in_progress",
+#     "priority": "high"
+# }
+
+# DELETE http://127.0.0.1:5000/api/tasks/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODQxNTAzMCwianRpIjoiODc4YjFmZmYtNDY2NS00NDY1LThhZjQtZTk5YzIzN2VmNjYwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODg0MTUwMzAsImNzcmYiOiJhZWQ3NzdhMS1hMDU2LTRkNmEtOWFjMS1jMWE2MmQ2NzdlZjQiLCJleHAiOjE3ODg0MTU5MzB9.19uySCNuBkw6yHjlo8FnIvFp0t_1jvzfJVk3_L7WyZQ
+
+GET http://127.0.0.1:5000/api/tasks?priority=high
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4ODQxNjk4MiwianRpIjoiNjg4NDEyMjAtZTZmNS00Njg5LWFhNTEtMWE1Y2U5NzFiZDc3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODg0MTY5ODIsImNzcmYiOiI1NzY2ZTMwZC1jYjg2LTQ0ZjctYWU2My0yNmZkMGMxNzZkYjIiLCJleHAiOjE3ODg0MTc4ODJ9.gLqJfVAPG7GDVjse77UO5T3W4RVQr-aLB0ZdHVPXhR0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
